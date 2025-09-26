@@ -67,6 +67,18 @@ export const EcommerceTemplate = ({
                 Inicio
               </Link>
               <Link 
+                to="/about" 
+                className="text-foreground/70 hover:text-pet-green transition-colors font-medium"
+              >
+                Sobre Nosotros
+              </Link>
+              <Link 
+                to="/shipping-calculator" 
+                className="text-foreground/70 hover:text-pet-green transition-colors font-medium"
+              >
+                Calculadora de Envíos
+              </Link>
+              <Link 
                 to="/blog" 
                 className="text-foreground/70 hover:text-pet-green transition-colors font-medium"
               >
@@ -154,17 +166,23 @@ export const EcommerceTemplate = ({
                 Inicio
               </Link>
               <Link 
+                to="/about" 
+                className="block text-gray-300 hover:text-white transition-colors"
+              >
+                Sobre Nosotros
+              </Link>
+              <Link 
+                to="/shipping-calculator" 
+                className="block text-gray-300 hover:text-white transition-colors"
+              >
+                Calculadora de Envíos
+              </Link>
+              <Link 
                 to="/blog" 
                 className="block text-gray-300 hover:text-white transition-colors"
               >
                 Blog de Mascotas
               </Link>
-              <a 
-                href="#" 
-                className="block text-gray-300 hover:text-white transition-colors"
-              >
-                Sobre Nosotros
-              </a>
               <a 
                 href="#" 
                 className="block text-gray-300 hover:text-white transition-colors"
