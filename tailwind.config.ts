@@ -61,6 +61,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Colores específicos para tienda de mascotas
+				pet: {
+					green: 'hsl(142, 76%, 36%)',
+					'green-light': 'hsl(142, 76%, 96%)',
+					orange: 'hsl(25, 95%, 53%)',
+					'orange-light': 'hsl(25, 95%, 96%)',
+					blue: 'hsl(217, 91%, 60%)',
+					'blue-light': 'hsl(217, 91%, 96%)',
+					brown: 'hsl(30, 67%, 44%)',
+					'brown-light': 'hsl(30, 67%, 96%)'
 				}
 			},
 			borderRadius: {
@@ -84,11 +95,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'bounce-gentle': {
+					'0%, 100%': {
+						transform: 'translateY(0)',
+						animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)'
+					},
+					'50%': {
+						transform: 'translateY(-5px)',
+						animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-gentle': 'bounce-gentle 2s infinite'
 			}
 		}
 	},
