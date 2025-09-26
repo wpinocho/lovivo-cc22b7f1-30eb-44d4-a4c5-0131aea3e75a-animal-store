@@ -37,19 +37,32 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
     <EcommerceTemplate 
       showCart={true}
     >
-      {/* Hero Section */}
-      <section className="pet-gradient py-16 border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Hero Section with Background Image */}
+      <section className="relative py-20 border-b overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=1200&h=800&fit=crop&crop=center)'
+          }}
+        >
+          {/* Overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-pet-green/20 to-pet-orange/20"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
-            <div className="bg-white/80 backdrop-blur-sm rounded-full p-4 shadow-lg">
-              <Heart className="h-12 w-12 text-pet-green animate-bounce-gentle" />
+            <div className="bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-xl">
+              <Heart className="h-12 w-12 text-pet-green animate-bounce" />
             </div>
           </div>
           
-          <h1 className="text-5xl font-bold text-foreground mb-4">
-            🐾 <span className="text-pet-green">PetShop</span> Premium
+          <h1 className="text-6xl font-bold text-white mb-4 drop-shadow-lg">
+            🐾 <span className="text-pet-green-light">PetShop</span> Premium
           </h1>
-          <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto drop-shadow-md">
             Todo lo que tu mascota necesita para ser feliz y saludable. 
             Productos de calidad premium con envío rápido y atención especializada.
           </p>
@@ -62,21 +75,21 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
               placeholder="Buscar productos para tu mascota..." 
               value={searchTerm} 
               onChange={(e) => setSearchTerm(e.target.value)} 
-              className="pl-10 bg-white/90 backdrop-blur-sm border-pet-green/20 focus:border-pet-green"
+              className="pl-10 bg-white/95 backdrop-blur-sm border-white/30 focus:border-pet-green shadow-lg"
             />
           </div>
 
           {/* Trust Indicators */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="flex items-center justify-center space-x-2 bg-white/60 backdrop-blur-sm rounded-lg p-4">
+            <div className="flex items-center justify-center space-x-2 bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-lg">
               <Shield className="h-5 w-5 text-pet-green" />
               <span className="text-sm font-medium text-foreground">Productos Garantizados</span>
             </div>
-            <div className="flex items-center justify-center space-x-2 bg-white/60 backdrop-blur-sm rounded-lg p-4">
+            <div className="flex items-center justify-center space-x-2 bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-lg">
               <Truck className="h-5 w-5 text-pet-orange" />
               <span className="text-sm font-medium text-foreground">Envío Gratis +$50</span>
             </div>
-            <div className="flex items-center justify-center space-x-2 bg-white/60 backdrop-blur-sm rounded-lg p-4">
+            <div className="flex items-center justify-center space-x-2 bg-white/80 backdrop-blur-sm rounded-lg p-4 shadow-lg">
               <Star className="h-5 w-5 text-pet-blue" />
               <span className="text-sm font-medium text-foreground">Asesoría Veterinaria</span>
             </div>

@@ -48,6 +48,12 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 142 76% 20%;
     --sidebar-border: 142 30% 88%;
     --sidebar-ring: 142 76% 36%;
+
+    /* Pet store custom colors */
+    --pet-green: 142 76% 36%;
+    --pet-green-light: 142 76% 85%;
+    --pet-orange: 25 95% 53%;
+    --pet-blue: 210 100% 56%;
   }
 
   .dark {
@@ -86,6 +92,12 @@ All colors MUST be HSL.
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 142 76% 45%;
+
+    /* Pet store custom colors for dark mode */
+    --pet-green: 142 76% 45%;
+    --pet-green-light: 142 76% 75%;
+    --pet-orange: 25 95% 60%;
+    --pet-blue: 210 100% 65%;
   }
 }
 
@@ -113,5 +125,50 @@ All colors MUST be HSL.
   .pet-card-hover:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+
+  /* Custom pet store colors as utilities */
+  .text-pet-green {
+    color: hsl(var(--pet-green));
+  }
+  
+  .text-pet-green-light {
+    color: hsl(var(--pet-green-light));
+  }
+  
+  .text-pet-orange {
+    color: hsl(var(--pet-orange));
+  }
+  
+  .text-pet-blue {
+    color: hsl(var(--pet-blue));
+  }
+  
+  .bg-pet-green {
+    background-color: hsl(var(--pet-green));
+  }
+  
+  .bg-pet-green-light {
+    background-color: hsl(var(--pet-green-light));
+  }
+  
+  .bg-pet-orange {
+    background-color: hsl(var(--pet-orange));
+  }
+  
+  .bg-pet-blue {
+    background-color: hsl(var(--pet-blue));
+  }
+  
+  .border-pet-green {
+    border-color: hsl(var(--pet-green));
+  }
+  
+  .hover\:bg-pet-green:hover {
+    background-color: hsl(var(--pet-green));
+  }
+  
+  .hover\:bg-pet-orange\/90:hover {
+    background-color: hsl(var(--pet-orange) / 0.9);
   }
 }
